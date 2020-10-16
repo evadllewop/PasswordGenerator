@@ -29,30 +29,26 @@ function generatePassword() {
 
   // Setting character arrays using 'split'
   var charSet = [];
-  var charSpecial = "!@#$%^&*()_+~`|}{[];?><,./-='";
-  var charSpecialArr = charSpecial.split("");
-  var charNumeric = "012345678910";
-  var charNumericArr = charNumeric.split("");
-  var charLower = "abcdefghijklmnopqrstuvwxyz";
-  var charLowerArr = charLower.split("");
-  var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var charUpperArr = charUpper.split("");
+  var charSpecial = "!@#$%^&*()_+~`|}{[];?><,./-='".split("");
+  var charNumeric = "012345678910".split("");
+  var charLower = "abcdefghijklmnopqrstuvwxyz".split("");
+  var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   // Add character types based on user choices
   if (confirmSpecial) {
-    Array.prototype.push.apply(charSet, charSpecialArr);
+    Array.prototype.push.apply(charSet, charSpecial);
   }
 
   if (confirmNumeric) {
-    Array.prototype.push.apply(charSet, charNumericArr);
+    Array.prototype.push.apply(charSet, charNumeric);
   }
 
   if (confirmLower) {
-    Array.prototype.push.apply(charSet, charLowerArr);
+    Array.prototype.push.apply(charSet, charLower);
   }
 
   if (confirmUpper) {
-    Array.prototype.push.apply(charSet, charUpperArr);
+    Array.prototype.push.apply(charSet, charUpper);
   }
 
   // Concantenating all characters for randomization
